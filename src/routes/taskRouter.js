@@ -5,5 +5,5 @@ const { storeTask } = require('../controller/taskController');
 
 router.post('/store/task', storeTask);
 
-modeule.exports = router;
+module.exports = router;
 

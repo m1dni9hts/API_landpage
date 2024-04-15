@@ -7,7 +7,7 @@ async function storeTask(request, response) {
         request.body.description
     )
 
-    const query = "INSERT INTO db_landpage(title,description) VALUES (?,?)";
+    const query = "INSERT INTO tasks(title,description) VALUES (?,?)";
 
     connection.query(query, params, (err, results) => {
         if(results) {
@@ -24,7 +24,8 @@ async function storeTask(request, response) {
                 .status(400)
                 .json({
                     success: false,
-                    message: "Ops"
+                    message: "Ops",
+                    data: err
                 })
 
         }
