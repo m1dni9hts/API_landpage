@@ -16,6 +16,6 @@ button.onclick = async function () {
     if (this.contentEditable.success) {
             alert("sucesso")
     } else {
-        alert("não")
+        alert("Não")
     }
 }
